@@ -1,1 +1,1 @@
-# V_card-using-python
+# fpdf and qr needs to install before running
