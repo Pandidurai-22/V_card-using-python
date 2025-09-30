@@ -16,7 +16,7 @@ EMAIL:pandidurai32127@gmail.com
 ADR:IITM-Pravartak,B5-01,B-Block,5th Floor,IIT Madras Research Park,Kanagam Road,Taramani,Chennai - 600 113
 END:VCARD"""
 
-# Generate QR Code with Circle Modules
+# editing
 qr = qrcode.QRCode(
     version=3,
     error_correction=qrcode.constants.ERROR_CORRECT_Q,
@@ -36,7 +36,7 @@ qr.make(fit=True)
 #     )
 # )
 
-# Customize QR code style with horizontal gradient
+# Customizing part
 img = qr.make_image(
     image_factory=StyledPilImage,
     module_drawer=CircleModuleDrawer(),
@@ -48,10 +48,10 @@ img = qr.make_image(
 )
 
 
-# Save the circular QR code
+# Saving part
 img.save("Pandidurai_qr_circular.png")
 
-# Generate PDF with circular QR
+# Generating part
 pdf = FPDF()
 pdf.add_page()
 pdf.set_font("Arial", size=12)
@@ -61,3 +61,4 @@ pdf.image("Pandidurai_qr_circular.png", x=60, y=40, w=90)
 pdf.output("Pandidurai_contact_dots.pdf")
 
 print("Circular QR Code and PDF for Pandidurai created successfully!")
+
